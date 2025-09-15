@@ -33,3 +33,29 @@ header {
     padding: 1em;
     text-align: right;
 }
+
+#meny-check{
+    display: none;
+}
+
+#menyikon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#meny-check:checked + #menyikon{
+    background: url("close.svg");
+}
+
+#meny{
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+#meny-check:checked ~ #meny{
+    display: block;
+}
