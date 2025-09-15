@@ -35,13 +35,13 @@ p {
     padding: 0 2rem;
 }
 header {
-    background-color: #FF7400;
+    background-color: rgb(189 85 29);
     padding: 1em;
     text-align: right;
 }
 
 footer{
-    background-color: #FF7400;
+    background-color: rgb(189 85 29);
     height: 300px;
 }
 
