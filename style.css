@@ -37,7 +37,11 @@ p {
 header {
     background-color: rgb(189 85 29);
     padding: 1em;
-    text-align: right;
+    
+}
+
+.nav{
+    display: inline;
 }
 
 footer{
@@ -69,6 +73,7 @@ a{
     list-style: none;
     padding: 0;
     margin: 1rem 0 0 0;
+    background-color: navy;
 }
 
 #meny-check:checked ~ #meny{
