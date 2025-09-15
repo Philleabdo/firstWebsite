@@ -74,3 +74,58 @@ a{
 #meny-check:checked ~ #meny{
     display: block;
 }
+
+.profilbild{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.kontakt-container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.kontakt-bakgrund {
+    flex: 1;
+    background: url("basketbild.webp") no-repeat center center/cover;
+}
+
+.kontakt-info {
+    flex: 1;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+}
+
+.kontakt-info h1 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.kontakt-info h2 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .kontakt-container {
+        flex-direction: column;
+    }
+
+    .kontakt-bakgrund {
+        height: 200px;
+        flex: none;
+    }
+
+    .kontakt-bakgrund {
+        height: 200px;
+        flex: none;
+    }
+}
