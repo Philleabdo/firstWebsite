@@ -83,6 +83,12 @@ a{
     display: block;
     margin-bottom: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+}
+
+.profilbild:hover{
+    transform: scale(0.9);
 }
 
 .kontakt-container{
