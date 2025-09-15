@@ -34,6 +34,18 @@ header {
     text-align: right;
 }
 
+footer{
+    background-color: #082A77;
+}
+
+a{
+    color: white;
+}
+
+.behållare{
+    padding: 1rem;
+}
+
 #meny-check{
     display: none;
 }
