@@ -45,10 +45,6 @@ header {
     cursor: pointer;
 }
 
-#meny-check:checked + #menyikon{
-    background: url("close.svg");
-}
-
 #meny{
     display: none;
     list-style: none;
