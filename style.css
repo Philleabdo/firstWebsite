@@ -144,7 +144,7 @@ a{
 .sponsorer{
     padding: 2rem;
     text-align: center;
-    background-color: #FF7400;
+    background-color: #fff;
 }
 
 .sponsorer h2{
@@ -166,13 +166,6 @@ a{
     width: 150px;
     height: 150px;
     object-fit: contain;
-    background: #f9f9f9;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.sponsor-grid img:hover{
-    transform: scale(1.1);
 }
