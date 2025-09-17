@@ -307,6 +307,7 @@ a{
 }
 
 .fyllnad{
+    width: 0;
     height: 100%;
     color: #fff;
     text-align: right;
