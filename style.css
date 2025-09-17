@@ -54,13 +54,12 @@ p {
 header {
     background-color: rgb(189 85 29);
     padding: 1em;
-    max-width: 100%;   
 }
 
 .meny-behållare{
     display: flex;
     max-width: 70%;
-    text-align: center;
+    justify-content: center;
 }
 
 #menylista{
