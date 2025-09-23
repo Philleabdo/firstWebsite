@@ -47,36 +47,77 @@ h2 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 4cqmax;
     margin: 1rem 0;
     padding: 0 2rem;
 }
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
     background-color: rgb(189 85 29);
-    padding: 1em;
+    color: white;
+    position: relative;
+    z-index: 1000;
 }
 
-.meny-behållare{
+/* Logga */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Länkar i mitten */
+.nav-links {
     display: flex;
-    max-width: 70%;
-    justify-content: center;
+    gap: 20px;
 }
 
-#menylista{
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburgare (alltid synlig) */
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Mobilmeny */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(189 85 29);
+    position: absolute;
+    top: 80px; /* placera under header */
+    right: 0;
+    width: 200px;
+}
+
+.mobile-menu a {
+    padding: 10px 20px;
+    border-top: 1px solid white;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    background-color: #444;
+}
+
+/* Visa mobilmenyn när aktiv */
+.mobile-menu.show {
     display: flex;
-    margin: 0 2rem;
-    padding: 0;
-    list-style-type: none;
-    
 }
 
-#menylista li{
-    margin: 0 3rem;
-}
-
-.nav{
-    display: inline;
-}
 
 footer{
     background-color: rgb(189 85 29);
@@ -284,6 +325,10 @@ a{
 @media (max-width: 700px) {
     .galleri-grid-top{
         grid-template-columns: min(300px, 90vw);
+    }
+
+    .nav-links {
+        display: none; /* Dölj länkar i mitten på mobil */
     }
 }
 
