@@ -346,6 +346,70 @@ li{
     color: #FF7400;
 }
 
+.kyri-sida .slideshow {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.kyri-sida .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.kyri-sida .slider img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.kyri-sida .slider button {
+    background: #FF7400;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.kyri-sida .slider button:hover {
+    background: #e06200;
+}
+
+.kyri-sida .skills {
+    max-width: 600px;
+    margin: 60px auto;
+}
+
+.kyri-sida .skill {
+    margin-bottom: 20px;
+}
+
+.kyri-sida .skill p {
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+.kyri-sida .skill-bar {
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.kyri-sida .skill-fill {
+    background: #FF7400;
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 2s ease-in-out;
+}
+
 .profilbild{
     width: 150px;
     height: 150px;

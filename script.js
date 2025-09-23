@@ -42,3 +42,41 @@ if(form){
         form.reset();
     });
 }
+
+
+
+
+
+const bilder = [
+    "Lebron1.jpg",
+    "Lebron4.jpg",
+    "Lebron5.jpg"
+];
+
+let index = 0;
+const slide = document.getElementById("slide");
+
+document.getElementById("next").addEventListener("click", () => {
+    index = (index + 1) % bilder.length;
+    console.log("Next klickad, index=", index, "bild =", bilder [index]);
+    slide.src = bilder[index];
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+    index = (index - 1 + bilder.length) % bilder.length;
+    console.log("Prev klickad, index=", index, "bild =", bilder [index]);
+    slide.src = bilder[index];
+});
+
+window.addEventListener("scroll", () => {
+    const skills = document.querySelectorAll(".skill-fill");
+    skills.forEach (bar => {
+        const barPos = bar.getBoundingClientRect().top;
+        const winHeight = window.innerHeight;
+        if (barPos < winHeight) {
+            const percent = bar.getAttribute("data-percent");
+            bar.style.width = percent + "%";
+        }
+    });
+});
+
