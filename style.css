@@ -1,5 +1,5 @@
 body{
-    background-color: #FF7400;
+    background-color: rgb(142 64 22);
     margin: 0;
     padding: 0;
 }
@@ -12,6 +12,7 @@ main {
     margin: 0;
     padding: 0;
 }
+
 
 img{
     max-width: 95%;
@@ -110,7 +111,7 @@ header {
 }
 
 .mobile-menu a:hover {
-    background-color: #444;
+    background-color: rgb(142 64 22);
 }
 
 /* Visa mobilmenyn när aktiv */
@@ -140,14 +141,32 @@ header {
     background-color: #003D64;
     color: white;
     padding: 2% 10%;
+    text-align: center;
+}
+
+.text-lista p{
+    font-weight: bold;
 }
 
 .text-lista ul{
     justify-content: space-between;
     display: flex;
+    padding: 0;
+    margin: 5px;
 }
 
+.text-lista li{
+    width: 200px;
+}
 
+.över-lista{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.presentation{
+    padding: 0 30%;
+}
 
 
 
