@@ -241,6 +241,111 @@ li{
     display: block;
 }
 
+.kyri-sida .hero {
+    background: url("novahuset.png") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.kyri-sida .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.kyri-sida .hero h2 {
+    font-size: 1.5rem;
+    font-weight:300;
+}
+
+.kyri-sida .profil-kort {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.kyri-sida . .profil-kort img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.kyri-sida .kontakt {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.kyri-sida .kontakt ul {
+    list-style: none;
+    padding: 0;
+}
+
+.kyri-sida .kontakt li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.kyri-sida .kontakt .ikon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+.kyri-sida .tidslinje {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.kyri-sida .tidslinje h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.kyri-sida .timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid #FF7400;
+}
+
+.kyri-sida .timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.kyri-sida .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: #FF7400;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 3px #FF7400;
+}
+
+.kyri-sida .timeline-content {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kyri-sida .timeline-content h3 {
+    margin: 0 0 5px;
+    color: #FF7400;
+}
+
 .profilbild{
     width: 150px;
     height: 150px;
