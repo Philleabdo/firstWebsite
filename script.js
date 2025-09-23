@@ -15,7 +15,7 @@ if(form){
         const namn = document.getElementById('namn').value.trim();
         const email = document.getElementById('email').value.trim();
         const kontakt = document.getElementById('kontaktperson').value;
-        const ämne = document.getElementById('meddalande').value.trim();
+        const ämne = document.getElementById('meddelande').value.trim();
 
         if(!namn || !email || !kontakt || !ämne || !meddelande){
             alert("Fyll i alla fält");
@@ -27,7 +27,7 @@ if(form){
             return;
         }
 
-        const ord = meddelande.split(/\s+/).filter(Boolean).lenght;
+        const ord = meddelande.split(/\s+/).filter(Boolean).length;
         if(ord > 100){
             alert('Meddelandet är för långt (max 100 ord)');
             return;
@@ -35,9 +35,9 @@ if(form){
 
         const body = "Avsändare: " + namn + " <" + email + ">\n\n" + meddelande;
         const subject = ämne;
-        const mailto = "mailto:" + kontakt + "?subject" + subject + "&body=" + body;
+        const mailto = "mailto:" + kontakt + "?subject=" + subject + "&body=" + body;
 
-        windows.location.href = mailto;
+        window.location.href = mailto;
         form.reset();
     });
 }
