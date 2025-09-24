@@ -15,7 +15,7 @@ main {
 
 
 img{
-    max-width: 95%;
+    max-width: 100%;
 }
 
 .bilder{
@@ -101,6 +101,7 @@ header {
     top: 80px; /* placera under header */
     right: 0;
     width: 200px;
+    z-index: 100;
 }
 
 .mobile-menu a {
@@ -121,12 +122,18 @@ header {
 
 .startsidabild{
     text-align: center;
-    background-image: url("bakrgrundframsida.jpg");
-    color: white;
-    padding: 10% 20%;
+    /* background-image: url("bakrgrundframsida.jpg"); */
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    filter: brightness(50%);
+    margin: auto;
+    display: block;
+
 }
 
-.startsidabild h1{
+
+.bildinfo h1{
     color: white;
 }
 
@@ -135,6 +142,18 @@ header {
     padding: 10px 40px;
     border-style: none;
     font-size: 1.5rem;
+}
+
+.bildinfo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    color: white;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin-top: 20%;
 }
 
 .text-lista{
