@@ -30,6 +30,11 @@ if(form){
             return;
         }
 
+        if (telefon && !/^[0-9]+$/.test(telefon)) {
+            alert("Telefonnummer får bara innehålla siffror");
+            return;
+        }
+
         const ord = meddelande.split(/\s+/).filter(Boolean).length;
         if(ord > MAX_ORD){
             alert('Meddelandet är för långt (max ' + MAX_ORD + ' ord)');
