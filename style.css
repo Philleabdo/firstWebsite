@@ -655,7 +655,7 @@ main { padding: 16px; }
     max-width: 680px;
     margin: 24px auto;
     padding: 16px;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 10px;
     background: #fff;
 }
