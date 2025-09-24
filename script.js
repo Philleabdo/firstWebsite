@@ -1,10 +1,11 @@
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
+if(hamburger && mobileMenu){
 hamburger.addEventListener('click', () => {
     mobileMenu.classList.toggle('show');
-});
-
+    });
+}
 const form = document.getElementById('kontaktForm');
 const MAX_ORD = 100;
 
@@ -14,6 +15,7 @@ if(form){
 
         const namn = document.getElementById('namn').value.trim();
         const email = document.getElementById('email').value.trim();
+        const telefon = document.getElementById('telefon').value.trim();
         const kontakt = document.getElementById('kontaktperson').value;
         const ämne = document.getElementById('ämne').value.trim();
         const meddelande = document.getElementById('meddelande').value.trim();
@@ -24,17 +26,20 @@ if(form){
         }
 
         if (!email.includes("@")){
-            alert("E-post måste inehålla @");
+            alert("E-post måste innehålla @");
             return;
         }
 
         const ord = meddelande.split(/\s+/).filter(Boolean).length;
         if(ord > MAX_ORD){
-            alert('Meddelandet är för långt ( ' + MAX_ORD + ' ord)');
+            alert('Meddelandet är för långt (max ' + MAX_ORD + ' ord)');
             return;
         }
 
-        const body = "Avsändare: " + namn + " <" + email + ">\n\n" + meddelande;
+        let body = "Avsändare: " + namn + " <" + email + ">";
+        if(telefon) body += "\nTelefon: " + telefon;
+        body += "\n\n" + meddelande;
+
         const subject = ämne;
         const mailto = "mailto:" + kontakt + "?subject=" + subject + "&body=" + body;
 
