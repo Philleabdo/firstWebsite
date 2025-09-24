@@ -647,3 +647,47 @@ li{
 .bilder .bildkort.attack{ background-image: url("spelare3.jpg"); }
 
 .bildbehållare1{ display: inline-block; }
+
+body { font-family: Arial, sans-serif; margin: 0; color: #222; }
+main { padding: 16px; }
+
+.kontakt {
+    max-width: 680px;
+    margin: 24px auto;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+}
+
+#kontaktForm input,
+#kontaktForm select,
+#kontaktForm textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font: inherit;
+}
+
+#kontaktForm textarea { min-height: 120px; }
+#kontaktForm button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+}
+#kontaktForm button:hover { background: #1e4fd6; }
+
+.mobil-menu {display: none; }
+.mobile-menu.show {display: block; }
+.mobile-menu a {
+    display: block;
+    padding: 10px 12px;
+    border-top: 1px solid #eee;
+    text-decoration: none;
+    color: inherit;
+}
+.mobile-menu a:hover { background: #f3f4f6; }
