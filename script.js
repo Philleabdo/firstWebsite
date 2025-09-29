@@ -66,17 +66,22 @@ const bilder = [
 let index = 0;
 const slide = document.getElementById("slide");
 
-document.getElementById("next").addEventListener("click", () => {
-    index = (index + 1) % bilder.length;
-    console.log("Next klickad, index=", index, "bild =", bilder [index]);
-    slide.src = bilder[index];
-});
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
 
-document.getElementById("prev").addEventListener("click", () => {
-    index = (index - 1 + bilder.length) % bilder.length;
-    console.log("Prev klickad, index=", index, "bild =", bilder [index]);
-    slide.src = bilder[index];
-});
+if(slide && nextBtn && prevBtn){
+    nextBtn.addEventListener("click", () => {
+        index = (index + 1) % bilder.length;
+        console.log("Next klickad, index=", index, "bild=", bilder [index]);
+        slide.src = bilder[index];
+    });
+
+    prevBtn.addEventListener("click", () => {
+        index = (index - 1 + bilder.length) % bilder.length;
+        console.log("Prev klickad, index=", index, "bild =", bilder [index]);
+        slide.src = bilder[index];
+    });
+}
 
 window.addEventListener("scroll", () => {
     const skills = document.querySelectorAll(".skill-fill");
@@ -86,6 +91,20 @@ window.addEventListener("scroll", () => {
         if (barPos < winHeight) {
             const percent = bar.getAttribute("data-percent");
             bar.style.width = percent + "%";
+        }
+    });
+});
+
+window.addEventListener("scroll", () => {
+    const skills = document.querySelectorAll(".fyllnad");
+    skills.forEach (bar => {
+        const barPos = bar.getBoundingClientRect().top;
+        const winHeight = window.innerHeight;
+
+        if (barPos < winHeight && !bar.dataset.animated) {
+            const percent = bar.getAttribute("data-fyllnad");
+            bar.style.width = percent + "%";
+            bar.dataset.animated = "true";
         }
     });
 });
