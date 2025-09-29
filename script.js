@@ -109,3 +109,49 @@ window.addEventListener("scroll", () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const list = document.getElementById('proj-list');
+    const qEl = document.getElementById('proj-q');
+    const sortEl = document.getElementById('proj-sort');
+    if(!list) return;
+
+    let items = [];
+
+    axios.get('./data.json').then(({data}) => {
+        items = data.projects || [];
+        render();
+    }).catch(() => {
+        list.innerHTML = '<li>Kunde inte läsa projects.json</li>';
+    });
+
+    function render(){
+        const q = (qEl?.value || '').toLowerCase().trim();
+
+        let v = items.filter(p =>
+        (p.title + p.customer + (p.category || '')).toLowerCase().includes(q)
+        );
+
+    switch (sortEl?.value) {
+        case 'date-asc': v.sort((a,b)=> a.date.localeCompare(b.date)); break;
+        case 'date-desc': v.sort((a,b)=> b.date.localeCompare(a.date)); break;
+        case 'title-asc': v.sort((a,b)=> a.title.localeCompare(b.title)); break;
+        case 'title-desc': v.sort((a,b)=> b.title.localeCompare(a.title)); break;
+        default:           v.sort((a,b)=> b.date.localeCompare(a.date));
+    }
+
+    list.innerHTML = v.map(p => `
+        <li class="proj-item">
+            <h3>${p.title}</h3>
+            <p><strong>Kund:</strong> ${p.customer} · <strong>Datum:</strong> ${p.date}</p>
+            <p>${p.description}</p>
+        </li>
+        `).join('');
+    }
+    qEl?.addEventListener('input', render);
+    sortEl?.addEventListener('change', render);
+    });
+
+
+
+
+

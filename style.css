@@ -708,3 +708,43 @@ li{
     color: inherit;
 }
 .mobile-menu a:hover { background: #f3f4f6; }
+
+#mina-projekt {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.proj-controls {
+    display: flex; 
+    gap: .5rem;
+    margin: .5rem 0 1rem;
+}
+
+.proj-controls input, .proj-controls select {
+    padding: .6rem .8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font: inherit;
+}
+
+#proj-lista{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: .75rem;
+}
+
+.proj-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-left: 6px solid #FF7400;
+    border-radius: 10px;
+    padding: .9rem 1rem;
+}
+
+.proj-item h3{
+    margin: 0 0 .35rem;
+    font-size: 1.05rem;
+}
