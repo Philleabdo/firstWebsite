@@ -1,0 +1,9 @@
+{
+    "projects": [
+        {"title": "Matchcenter", "customer": "Novaballers", "description": "Live-score & perioder", "date": "2025-03-12", "category": "Match" },
+        {"title": "Sponsorpaket", "customer": "Novaballers", "description": "Paket & intresseformulär", "date": "2025-04-15", "category": "Sponsorer" },
+        {"title": "Fanshop", "customer": "Novaballers", "description": "Merch och kassa", "date": "2025-06-20", "category": "E-handel" },
+        {"title": "Ungdomsakademi", "customer": "Novaballers", "description": "Träning & anmälan", "date": "2025-08-12", "category": "Junior" },
+        {"title": "Highlights-galleri", "customer": "Novaballers", "description": "Video/Foto-höjdpunkter", "date": "2025-10-30", "category": "Media" }
+    ]
+}
