@@ -119,12 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     axios.get('./data.json').then(({data}) => {
         items = data.projects || [];
-        render();
+        view();
     }).catch(() => {
         list.innerHTML = '<li>Kunde inte läsa projects.json</li>';
     });
 
-    function render(){
+    function view(){
         const q = (qEl?.value || '').toLowerCase().trim();
 
         let v = items.filter(p =>
@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </li>
         `).join('');
     }
-    qEl?.addEventListener('input', render);
-    sortEl?.addEventListener('change', render);
+    qEl?.addEventListener('input', view);
+    sortEl?.addEventListener('change', view);
     });
 
 
