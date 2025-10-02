@@ -54,9 +54,9 @@ if(form){
 }
 
 const bilderGalleri = [
-    "jackma1.webp",
-    "jackma2.jpg",
-    "jackma3.jpg"
+    "jackma1.png",
+    "jackma2.webp",
+    "jackma3.webp"
 ];
 
 let indexGalleri = 0;
