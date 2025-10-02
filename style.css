@@ -418,8 +418,7 @@ li{
     background: #eee;
     border-radius: 20px;
     overflow: hidden;
-    height: 25px;
-    position: relative;
+    height: 20px;
 }
 
 .kyri-sida .skill-fill {
@@ -428,18 +427,6 @@ li{
     height: 100%;
     border-radius: 20px;
     transition: width 2s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.kyri-sida .percent-text {
-    position: relative;
-    z-index: 1;
 }
 
 .profilbild{
@@ -760,4 +747,51 @@ li{
 .proj-item h3{
     margin: 0 0 .35rem;
     font-size: 1.05rem;
+}
+
+.slideshow-galleri{
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.kontakt-sida #galleri-paulus .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.kontakt-sida #galleri-paulus .slider button{
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #FF7400;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    user-select: none;
+}
+
+.kontakt-sida #galleri-paulus .slider button:hover{filter: brightness(1.05); }
+
+.kontakt-sida #galleri-paulus .slider img{
+    display: block;
+    width: min(820px, 92vw);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+@media(max-width: 480px){
+    .kontakt-sida #galleri-paulus .slider button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
 }
