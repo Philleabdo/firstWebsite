@@ -125,10 +125,19 @@
             
 
 
-<section class="projekt">
-    <h2>Mina projekt</h2>
-    <div id="project-list"></div>
-</section>
+ <section id="mina-projekt">
+        <h2>Mina projekt</h2>
+        <div class="proj-controls">
+            <input id="proj-q" type="search" placeholder="Sök (titel/kund/kategori)">
+            <select id="proj-sort">
+                <option value="date-desc">Nyast först</option>
+                <option value="date-asc">Äldst först</option>
+                <option value="title-asc">Titel A-Ö</option>
+                <option value="title-desc">Titel Ö-A</option>
+            </select>
+        </div>
+        <ul id="proj-list"></ul>
+    </section>
 
 
  <footer>
