@@ -418,7 +418,8 @@ li{
     background: #eee;
     border-radius: 20px;
     overflow: hidden;
-    height: 20px;
+    height: 25px;
+    position: relative;
 }
 
 .kyri-sida .skill-fill {
@@ -427,6 +428,18 @@ li{
     height: 100%;
     border-radius: 20px;
     transition: width 2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.kyri-sida .percent-text {
+    position: relative;
+    z-index: 1;
 }
 
 .profilbild{

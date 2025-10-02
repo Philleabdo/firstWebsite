@@ -109,16 +109,43 @@ if(slide && nextBtn && prevBtn){
 }
 
 window.addEventListener("scroll", () => {
-    const skills = document.querySelectorAll(".skill-fill");
-    skills.forEach (bar => {
-        const barPos = bar.getBoundingClientRect().top;
-        const winHeight = window.innerHeight;
-        if (barPos < winHeight) {
-            const percent = bar.getAttribute("data-percent");
-            bar.style.width = percent + "%";
-        }
-    });
+  const skills = document.querySelectorAll(".skill-fill");
+
+  skills.forEach(bar => {
+    const barPos = bar.getBoundingClientRect().top;
+    const winHeight = window.innerHeight;
+
+    if (barPos < winHeight && !bar.dataset.animated) {
+      const percent = parseInt(bar.getAttribute("data-percent"));
+      bar.style.width = percent + "%";
+
+      // 🔹 Procenttext
+      let start = 0;
+      const textEl = bar.querySelector(".percent-text");
+      if (textEl) {
+        const interval = setInterval(() => {
+          if (start >= percent) {
+            clearInterval(interval);
+          } else {
+            start++;
+            textEl.textContent = start + "%";
+          }
+        }, 20);
+      }
+
+      bar.dataset.animated = "true"; // hindrar att den körs flera gånger
+    }
+
+    // Om du vill att den ska resetas när man scrollar bort den:
+    if (barPos >= winHeight) {
+      bar.style.width = "0%";
+      const textEl = bar.querySelector(".percent-text");
+      if (textEl) textEl.textContent = "0%";
+      bar.dataset.animated = ""; // tillåter att den körs igen
+    }
+  });
 });
+
 
 window.addEventListener("scroll", () => {
     const skills = document.querySelectorAll(".fyllnad");

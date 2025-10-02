@@ -102,6 +102,7 @@
                     <p>Ledarskap</p>
                     <div class="skill-bar">
                         <div class="skill-fill" data-percent="90"></div>
+                        <span class="percent-text">0%</span>
                     </div>
                 </div>
 
@@ -109,6 +110,7 @@
                     <p>Rekrytering</p>
                     <div class="skill-bar">
                         <div class="skill-fill" data-percent="80"></div>
+                        <span class="percent-text">0%</span>
                     </div>
                 </div>
 
@@ -116,9 +118,11 @@
                     <p>Strategi</p>
                     <div class="skill-bar">
                         <div class="skill-fill" data-percent="95"></div>
+                        <span class="percent-text">0%</span>
                     </div>
                 </div>
             </section>
+            
 
         <!-- <section class="om-mig">
             <h2>Om mig</h2>
@@ -135,26 +139,7 @@
     <h2>Mina projekt</h2>
     <div id="project-list"></div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-    axios.get('data/data.json')
-    .then(response => {
-        const projects = response.data;
-        const projectList = document.getElementById("project-list");
 
-        projects.forEach(project => {
-            const div = document.createElement("div");
-            div.classList.add("project-card");
-            div.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <p><strong>Status:</strong> ${project.status}</p>
-            `;
-            projectList.appendChild(div);
-        });
-    })
-    .catch(error => console.error("Fel vid hämtning av projekt:", error));
-</script>
 
  <footer>
        <div class="behållare">

@@ -5,20 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Philip - NovaBallers</title>
 </head>
 <body>
     <header>
-            <input type="checkbox" id="meny-check">
-            <label for="meny-check" id="menyikon"><img src="basketikon.svg" alt=""></label>
-            <ul id="meny">
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="kyri.html">Kyri</a></li>
-                <li><a href="paulus.html">Paulus</a></li>
-                <li><a href="philip.html">Philip</a></li>
-            </ul>
+        <div class="logo"><a href="index.html"><img src="logga.svg" alt=""></a></div>
+        
+        <nav class="nav-links">
+            <a href="kyri.html">Kyri</a>
+            <a href="paulus.html">Paulus</a>
+            <a href="philip.html">Philip</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
     </header>
 
-    <p>han e sjuk jao</p>
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="kyri.html">Kyri</a>
+        <a href="paulus.html">Paulus</a>
+        <a href="philip.html">Philip</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Philip Abdo</h1>
+                <h2>CTO - Novaballers</h2>
+        </div>
+        </section>
+
+        <section class="profil">
+            <div class="profil-kort">
+                <img src="profilbild2.webp" alt="Kyri" class="profilbild">
+                <h3>Om min roll</h3>
+                <p>
+                    Som generaldirektör på Novaballers ansvarar jag för den övergripande organisationen kring laget.
+                    Jag arbetar med rekrytering av spelare, kontraktsförhandlingar och att bygga en stark lagkultur.
+                    Mitt mål är att skapa de bästa förutsättningarna för att laget ska kunna prestera på högsta nivå - både på och utanför planen.
+               </p>
+            </div>
+        </section>
+        
+            <section class="kontakt">
+            <h3>Kontakt</h3>
+            <ul>
+                <li><span class ="ikon">📧:</span> philip@novaballers.se</li>
+                <li><span class ="ikon">📞:</span> +46 73 677 03 06</li>
+                <li><span class ="ikon">📍:</span> karlsdalsallen 12, 702 43 Örebro</li>
+            </ul>
+            </section>
+
+            <section class="tidslinje">
+                <h2>Min resa med Novaballers</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2025-01</h3>
+                            <p>Började som scout och arbetade med att upptäcka unga talanger</p>
+                         </div>
+                        </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2025-05</h3>
+                            <p>Gick över till assisterande manager, ansvarig för spelarutveckling</p>
+                         </div>
+                        </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2025-09</h3>
+                            <p>Utsedd till Generaldirektör, med ansvar för organisationen, rekrytering och strategi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slideshow">
+                <h2>Galleri</h2>
+                <div class="slider">
+                <button id="prev">(</button>
+                <img id="slide" src="Lebron1.jpg" alt="Bildspel">
+                <button id="next">)</button>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h2>Kompetenser</h2>
+
+                <div class="skill">
+                    <p>Ledarskap</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>Rekrytering</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>Strategi</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="95"></div>
+                    </div>
+                </div>
+            </section>
+    </main>
 </body>
 </html>
