@@ -83,6 +83,23 @@ if(slide && nextBtn && prevBtn){
     });
 }
 
+const skills = document.querySelectorAll(".skill-fill");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const percent = entry.target.getAttribute("data-percent");
+            entry.target.style.width = percent + "%";
+        } else {
+            entry.target.style.width = "0%";
+        }
+    });
+}, {threshold: 0.5});
+
+skills.forEach(bar => {
+    observer.observe(bar);
+});
+
 window.addEventListener("scroll", () => {
     const skills = document.querySelectorAll(".skill-fill");
     skills.forEach (bar => {
