@@ -528,6 +528,11 @@ li{
         padding: 2%;
     }
 
+    .profilbild {
+    width: 100px;
+    height: 100px;
+}
+
 }
 
 .sponsorer{
