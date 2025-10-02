@@ -53,9 +53,34 @@ if(form){
     });
 }
 
+const bilderGalleri = [
+    "jackma1.webp",
+    "jackma2.jpg",
+    "jackma3.jpg"
+];
 
+let indexGalleri = 0;
+const slideGalleri = document.getElementById("slide-galleri");
 
+const nextGalleri = document.getElementById("next-galleri");
+const prevGalleri = document.getElementById("prev-galleri");
 
+if(slideGalleri && nextGalleri && prevGalleri){
+
+    slideGalleri.src = bilderGalleri[indexGalleri];
+
+    nextGalleri.addEventListener("click", () => {
+        indexGalleri = (indexGalleri + 1) % bilderGalleri.length;
+        console.log("Prev-galleri klickad, index=", indexGalleri, "bild=", bilderGalleri[indexGalleri])
+        slideGalleri.src = bilderGalleri[indexGalleri];
+    });
+
+    prevGalleri.addEventListener("click", () => {
+        indexGalleri = (indexGalleri - 1 + bilderGalleri.length) % bilderGalleri.length;
+        console.log("Prev-galleri klickad, index=", indexGalleri, "bild =", bilderGalleri [indexGalleri]);
+        slideGalleri.src = bilderGalleri[indexGalleri];
+    });
+}
 
 const bilder = [
     "Lebron1.jpg",

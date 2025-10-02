@@ -8,35 +8,3 @@
     ]
 }
 
-[
-    {
-        "id": 1,
-        "title": "spelarrekrytering",
-        "description": "Identifiera och kontraktera nya talanger för att förstärka läget.",
-        "status": "Pågående"
-    },
-    {
-        "id": 2,
-        "title": "Sponsorförhandlingar",
-        "description": "Skapa långsiktiga samarbeten med företag för att öka klubbens intäkter.",
-        "status": "Planerat"
-    },
-    {
-        "id": 3,
-        "title": "Arenaevent 2025",
-        "description": "Organisera matcher och event i hemmarena för att stärka lagets varumärke.",
-        "status": "Pågående"
-    },
-    {
-       "id": 4,
-        "title": "Ungdomsprogram",
-        "description": "Utveckla ett träningsprogram för ungdomar som kan bli framtida stjärnor.",
-        "status": "Avslutat" 
-    },
-    {
-        "id": 5,
-        "title": "Internationellt samarbete",
-        "description": "Bygga relationer med utländska klubbar för att ordna träningsläger.",
-        "status": "Planerat"
-    }
-]
