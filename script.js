@@ -11,6 +11,7 @@ const MAX_ORD = 100;
 
 if(form){
     form.addEventListener('submit', (e) => {
+        //stoppar default mailto
         e.preventDefault();
 
         const namn = document.getElementById('namn').value.trim();
@@ -182,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let v = items.filter(p =>
         (p.title + p.customer + (p.category || '')).toLowerCase().includes(q)
         );
-
+        // gemför a datum med b datum
     switch (sortEl?.value) {
         case 'date-asc': v.sort((a,b)=> a.date.localeCompare(b.date)); break;
         case 'date-desc': v.sort((a,b)=> b.date.localeCompare(a.date)); break;

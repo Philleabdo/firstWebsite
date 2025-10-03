@@ -69,6 +69,13 @@ html{
         display: block;
     }
 
+    .kontakt-box{
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 0 50px;
+        
+    }
+
 * {box-sizing: border-box}
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -158,6 +165,7 @@ img {vertical-align: middle;}
 .skill-container {
   width: 100%; /* Full width */
   background-color: #ddd; /* Grey background */
+  border-radius: 6px;
 }
 
 .skills {
@@ -169,9 +177,9 @@ img {vertical-align: middle;}
   transition: width 2s ease; /* mjuk animation */
 }
 
-.webb {width: 80%; background-color: #0441aa;} /* Green */
-.media {width: 70%; background-color: #2196F3;} /* Blue */
-.kom {width: 95%; background-color: #21c6f3;} /* Red */
+.webb {width: 80%; border-radius: 6px; background-color: #0441aa;} /* Green */
+.media {width: 70%; border-radius: 6px; background-color: #2196F3;} /* Blue */
+.kom {width: 95%; border-radius: 6px; background-color: #21c6f3;} /* Red */
 
 .basketball {
   position: fixed;
