@@ -32,8 +32,8 @@ img{
     display: inline-block
 }
 
-h1, h2 {
-    color: black;
+h1, h2, h3 {
+    color: #2a2a2a;
     text-align: center;
 }
 
@@ -101,24 +101,24 @@ header {
     top: 80px; /* placera under header */
     right: 0;
     width: 200px;
-    z-index: 100;
+    z-index: 999;
+    color: white;
 }
 
-.mobile-menu a {
+/*.mobile-menu a {
     padding: 10px 20px;
     border-top: 1px solid white;
-    color: white;
     text-decoration: none;
 }
 
-.mobile-menu a:hover {
-    background-color: rgb(142 64 22);
+.mobile-menu a :hover {
+    background: rgb(142 64 22);
 }
 
-/* Visa mobilmenyn när aktiv */
+ Visa mobilmenyn när aktiv 
 .mobile-menu.show {
     display: flex;
-}
+}*/
 
 .startsidabild{
     text-align: center;
@@ -747,7 +747,7 @@ li{
     text-decoration: none;
     color: inherit;
 }
-.mobile-menu a:hover { background: #f3f4f6; }
+.mobile-menu a:hover { background: rgb(142 64 22);; }
 
 #mina-projekt {
     max-width: 900px;

@@ -1,3 +1,74 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.bild-container {
+      position: relative;   /* Gör så att overlay kan placeras ovanpå */
+      width: 100%;
+      max-width: 100%;     /* Exempel på maxbredd */
+      z-index: 100;
+    }
+
+    .bild-container img {
+      width: 100%;
+      height: 700px;
+      display: block;
+      filter: brightness(50%);
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;   /* Placera i mitten lodrätt */
+      left: 50%;  /* Placera i mitten vågrätt */
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .overlay-text h1 {
+      font-size: 2em;
+      margin: 0 0 10px;
+      color: white;
+    }
+
+    .overlay-text p {
+      margin: 0 0 15px;
+    }
+
+    .knapp {
+      display: inline-block;
+      padding: 10px 20px;
+      background: rgb(0 77 126);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .knapp:hover {
+      background: rgb(35, 112, 159);
+    }
+
+    .philip-profil{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profil-container{
+        display: flex;
+        margin: 100px auto;
+        max-width: 800px;
+        padding: 2% 3%;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .profil-textbox{
+        display: block;
+    }
+
 * {box-sizing: border-box}
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -6,7 +77,7 @@ img {vertical-align: middle;}
 .slideshow-container {
   max-width: 1000px;
   position: relative;
-  margin: auto;
+  margin: 100px auto 0;
 }
 
 /* Next & previous buttons */
@@ -78,6 +149,52 @@ img {vertical-align: middle;}
   animation-duration: 1.5s;
 }
 
+#skill-box{
+    width: 60%;
+    margin: 0 auto;
+    padding: 100px 0 100px;
+}
+
+.skill-container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+  width: 0;
+  transition: width 2s ease; /* mjuk animation */
+}
+
+.webb {width: 80%; background-color: #0441aa;} /* Green */
+.media {width: 70%; background-color: #2196F3;} /* Blue */
+.kom {width: 95%; background-color: #21c6f3;} /* Red */
+
+.basketball {
+  position: fixed;
+  top: -100px; /* börjar utanför skärmen */
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  background: url('basketbollen.png') no-repeat center/cover; /* egen ikon/bild */
+  border-radius: 50%;
+  z-index: 9;
+  display: none; /* dold tills man scrollar */
+  animation: bounce 2s linear;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0) rotate(0deg); }
+  30%  { transform: translateY(300px) rotate(90deg); }
+  50%  { transform: translateY(0) rotate(180deg); }
+  70%  { transform: translateY(300px) rotate(270deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -87,3 +204,19 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+@media only screen and (max-width: 900px) {
+  .bild-container img {
+      height: 400px;
+  }
+
+  .profil-container{
+        display: block;
+        text-align: center;
+        padding: 40px 0 40px;
+    }
+
+
+    
+}
+
